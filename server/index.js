@@ -25,7 +25,10 @@ io.on('connection', (socket) => {
         if(error) return callback(error);
 
         socket.join(user.room);
+        console.log(user.room);
 
+        // add check if user.room is undefined or give it a timer
+        console.log(typeof user.room)
         socket.emit('message', { user: 'Admin', text: `${user.name}, welcome to the room ${user.room}`});
         socket.broadcast.to(user.room).emit('message', { user: 'Admin', text: `${user.name}, has joined!`});
 
