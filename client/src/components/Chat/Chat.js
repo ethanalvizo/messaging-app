@@ -59,6 +59,9 @@ const Chat = ({ location }) => {
                 <Messages messages={messages} name={name} />
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>   
+            
+            {/* TODO: Show all the users in the current room */}
+            {/* <TextContainer users={users} /> */}
         </div>
     )
 }
